@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Trains | Next-Gen IT Learning</title>
+    <style>
+        :root {
+            --neon-blue: #00f2ff;
+            --neon-purple: #7000ff;
+            --bg-black: #020205;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif; /* Futuristic font */
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* --- AI Grid & Glow Background --- */
+        .ai-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(transparent 0%, rgba(0, 242, 255, 0.05) 50%, transparent 100%),
+                radial-gradient(circle at 50% 50%, #1a1a2e 0%, #020205 100%);
+            z-index: -1;
+        }
+
+        /* --- Header / Navigation --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+            backdrop-filter: blur(15px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 8px var(--neon-blue);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            background: linear-gradient(to right, #fff, var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 2px var(--neon-blue)); }
+            to { filter: drop-shadow(0 0 15px var(--neon-purple)); }
+        }
+
+        .hero p {
+            font-family: 'Courier New', monospace; /* Tech feel */
+            color: #888;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            border-right: 2px solid var(--neon-blue);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(40) infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .ai-btn {
+            padding: 15px 40px;
+            border: 1px solid var(--neon-blue);
+            background: transparent;
+            color: var(--neon-blue);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: 0.4s;
+            font-weight: bold;
+        }
+
+        .ai-btn:hover {
+            background: var(--neon-blue);
+            color: #000;
+            box-shadow: 0 0 30px var(--neon-blue);
+        }
+
+        /* --- Training Tracks (Cards) --- */
+        .tracks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 5rem 10%;
+        }
+
+        .track-card {
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .track-card:hover {
+            border-color: var(--neon-purple);
+            transform: translateY(-10px);
+            background: gba(112, 0, 255, 0.05);
+        }
+
+        .track-card h3 {
+            color: var(--neon-blue);
+            margin-bottom: 15px;
+        }
+
+        .track-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at top right, rgba(0,242,255,0.1), transparent);
+            pointer-events: none;
+        }
+
+    </style>
+    <!-- Google Font for that tech look -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="ai-overlay"></div>
+
+    <header>
+        <div class="logo">Training Trains</div>
+        <nav class="nav-links">
+            <a href="#courses">IT Courses</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#labs">Virtual Labs</a>
+            <a href="#contract">Terminal</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Accelerate Your IQ</h1>
+        <p>> Initializing IT Training Protocol... Loading Expertise...</p>
+        <button onclick="window.location.href='https://trainingtrains.com/'">
+  Enter the track
+    </section>
+
+    <section class="tracks" id="courses">
+        <div class="track-card">
+            <h3>Cloud Architecture</h3>
+            <p>Master AWS, Azure, and GCP through our neural-simulated environments.</p>
+        </div>
+        <div class="track-card">
+            <h3>Cyber Security</h3>
+            <p>Defensive and offensive security training with real-time threat intelligence.</p>
+        </div>
+        <div class="track-card">
+            <h3>AI & ML Ops</h3>
+            <p>Go beyond coding. Learn to deploy and scale production-ready AI models.</p>
+        </div>
+        
+    </section>
+    <title>Dev Course Portal</title>
+    <style>
+        body { font-family: sans-serif; background: #111827; color: white; text-align: center; margin: 0; padding: 20px; }
+        nav { background: #1f2937; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
+        nav a { color: #60a5fa; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        
+        .card { background: #1f2937; padding: 25px; border-radius: 15px; max-width: 600px; margin: 20px auto; border: 1px solid #374151; }
+        h1, h2 { color: #60a5fa; }
+        
+        .course-list { text-align: left; display: inline-block; }
+        .btn { background: #3b82f6; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 15px; }
+        footer { margin-top: 40px; color: #6b7280; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div id="home" class="card">
+        <h1>Tech Learning</h1>
+        <p>Master Java, Web Dev, and Cybersecurity basics.</p>
+        <a href="#courses" class="btn">Get Started</a>
+    </div>
+
+    <div id="about" class="card">
+        <h2>About</h2>
+        <p> ​Target Audience: This section explicitly identifies its users as students and individuals preparing for technical interviews.</p>
+        <p>Content Strategy: It emphasizes "simplified technical notes," implying that complex topics are broken down into easy-to-digest formats.</p>
+        <p>User Experience: By placing this below the main header, it reinforces the site's credibility by explaining how the information is delivered.</p>
+        <p>Design Consistency: It maintains a clean, card-based layout that helps separate different types of information while keeping the interface uncluttered.</p>
+    </div>
+
+    <div id="courses" class="card">
+        <h2>Courses</h2>
+        <div class="course-list">
+            <li>• ​Full-Stack Web Development: Master the art of building responsive, modern websites using HTML5, CSS3, and interactive JavaScript frameworks.</li>
+            <li>•​Java Enterprise Programming: Deep dive into core Java concepts, including multi-threading, GUI development with Swing/AWT, and robust backend logic. </li>
+            <li>•Cybersecurity & Digital Forensics: Learn to protect digital assets and master forensic techniques for data acquisition and evidence recovery </li>
+            <li>*Lead Generation & Digital Marketing: Gain specialized skills in driving business growth through automated lead systems and data-driven marketing strate</li>
+            <li>*Interview & Certification Prep: Access simplified technical notes and mock interview sessions specifically designed to crack competitive IT recruitment exams.</li>
+        </div>
+    </div>
+
+    <div id="contact" class="card">
+        <h2>Contact</h2>
+        <p>Email: ceo@training trains.com</p>
+        <p>mobile number: +91 96985 48633</p>
+    </div>
+
+    <footer>&copy; 2026 vibin . AC. Portfolio</footers
+
+</body>
+</html>
